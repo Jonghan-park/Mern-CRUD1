@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler')
 const User = require('../model/userModel')
 const { decode } = require('jsonwebtoken')
 
-const protect = asyncHandler(async (req, res) => {
+const protect = asyncHandler(async (req, res, next) => {
   let token
 
   if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
