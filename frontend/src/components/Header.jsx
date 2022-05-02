@@ -20,7 +20,8 @@ const onLogout = () => {
         <Link to='/'>GoalSetter</Link>
         </div>
         <ul>
-          {user ? (<li>
+          {user ? (
+          <li>
           <button className='btn' onClick={onLogout}>
             <FaSignOutAlt /> Logout
             </button>
@@ -37,7 +38,8 @@ const onLogout = () => {
             <FaUser /> Register
           </Link>
         </li> 
-        </>)}
+        </>
+        )}
           
         </ul>      
     </header>
