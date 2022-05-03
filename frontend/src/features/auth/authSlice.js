@@ -43,7 +43,6 @@ export const authSlice = createSlice({
       state.isLoading = true
     })
     .addCase(register.fulfilled, (state, action) => {
-      
       state.isLoading = false
       state.isSuccess = true
       state.user = action.payload
@@ -55,12 +54,11 @@ export const authSlice = createSlice({
       state.user = null
     })
     .addCase(logout.fulfilled, (state) => {
+      
       state.user = null
     })
   },
 })
-
-
 
 export const { reset } = authSlice.actions
 export default authSlice.reducer
